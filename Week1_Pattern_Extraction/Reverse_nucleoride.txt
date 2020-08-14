@@ -1,0 +1,13 @@
+def Complement(Pattern):
+    # your code here
+    comp = ""
+    for i in Pattern:
+        if i == 'A':
+             comp += "T"
+        elif i == 'T':
+             comp += "A"
+        elif i == 'C':        
+             comp += "G"
+        elif i == 'G':             
+             comp += "C"
+    return comp

@@ -1,0 +1,22 @@
+def FrequencyMap(Text, k):
+    # your code here
+    freq = {}
+    n = len(Text)
+    for i in range(n-k+1):
+        Pattern = Text[i:i+k]
+        if Pattern in freq:
+            freq[Pattern] = freq[Pattern]+ 1
+        else: freq[Pattern] = 1
+    return freq
+
+Text = "TAAACGTGAGAGAAACGTGCTGATTACACTTGTTCGTGTGGTAT"
+k = 3
+freq = FrequencyMap(Text,k)
+max_freq= max(freq.values())
+
+for i in freq:
+  if freq[i] == max_freq:
+    print ("Max freq =" + i +" Appear "+ str(freq[i])+ " times")
+
+print("list:")
+print(freq)
